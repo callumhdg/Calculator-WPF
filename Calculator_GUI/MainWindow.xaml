@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="400">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--numbered buttons-->
+        <Button x:Name="btnNum1" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="1" Click="btnNum1_Click" />
+        <Button x:Name="btnNum2" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="2" Click="btnNum2_Click" />
+        <Button x:Name="btnNum3" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="3" Click="btnNum3_Click" />
+
+        <Button x:Name="btnNum4" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="4" Click="btnNum4_Click" />
+        <Button x:Name="btnNum5" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="5" Click="btnNum5_Click" />
+        <Button x:Name="btnNum6" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="6" Click="btnNum6_Click" />
+
+        <Button x:Name="btnNum7" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="7" Click="btnNum7_Click" />
+        <Button x:Name="btnNum8" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="8" Click="btnNum8_Click" />
+        <Button x:Name="btnNum9" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="9" Click="btnNum9_Click" />
+
+        <Button x:Name="btnNum0" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="0" Click="btnNum0_Click" />
+
+
+        <!--opperator buttons-->
+        <Button x:Name="btnAdd" Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="+" Click="btnAdd_Click" />
+        <Button x:Name="btnSubtract" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="-" Click="btnSubtract_Click" />
+        <Button x:Name="btnMultiply" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="X" Click="btnMultiply_Click" />
+        <Button x:Name="btnDivide" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="/" Click="btnDivide_Click" />
+
+        <Button x:Name="btnClear" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="C" Click="btnClear_Click" />
+        <Button x:Name="btnEquals" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="=" Click="btnEquals_Click" />
+
+                
+        <!--output-->
+        <Label x:Name="lblDisplay" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7" Grid.RowSpan="1"/>
+
 
     </Grid>
 </Window>

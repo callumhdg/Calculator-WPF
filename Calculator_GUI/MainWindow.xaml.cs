@@ -25,5 +25,100 @@ namespace Calculator_GUI
         {
             InitializeComponent();
         }
+
+
+        //Number Selection
+        private void btnNum1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum7_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum8_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum9_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNum0_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+
+
+        //Math Opperations
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSubtract_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDivide_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        //Calculate Output
+        private void btnEquals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        //Clear
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
