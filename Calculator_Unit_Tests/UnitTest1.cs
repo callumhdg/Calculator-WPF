@@ -10,36 +10,36 @@ namespace Calculator_Unit_Tests
         [TestCase(3, 5, 8)]
         [TestCase(83, 47, 130)]
         [TestCase(64, -70, -6)]
-        public void AddMethodWorksAsIntended(double x, double y, double expected)
+        public void AddMethodWorksAsIntended(int x, int y, int expected)
         {
-            double actual = Calculator.Add(x, y);
+            int actual = Calculator.Add(x, y);
             Assert.AreEqual(actual, expected);
         }
 
         [TestCase(7, 2, 5)]
         [TestCase(194, 74, 120)]
         [TestCase(55, -30, 85)]
-        public void SubtractMethodWorksAsIntended(double x, double y, double expected)
+        public void SubtractMethodWorksAsIntended(int x, int y, int expected)
         {
-            double actual = Calculator.Subtract(x, y);
+            int actual = Calculator.Subtract(x, y);
             Assert.AreEqual(actual, expected);
         }
 
         [TestCase(6, 4, 24)]
         [TestCase(8, 8, 64)]
         [TestCase(100, 90, 9000)]
-        public void MultiplyMethodWorksAsIntended(double x, double y, double expected)
+        public void MultiplyMethodWorksAsIntended(int x, int y, int expected)
         {
-            double actual = Calculator.Multiply(x, y);
+            int actual = Calculator.Multiply(x, y);
             Assert.AreEqual(actual, expected);
         }
 
         [TestCase(12, 4, 3)]
         [TestCase(60, 15, 4)]
         [TestCase(-90, 90, -1)]
-        public void DevideMethodWorksAsIntended(double x, double y, double expected)
+        public void DevideMethodWorksAsIntended(int x, int y, int expected)
         {
-            double actual = Calculator.Divide(x, y);
+            int actual = Calculator.Divide(x, y);
             Assert.AreEqual(actual, expected);
         }
 
