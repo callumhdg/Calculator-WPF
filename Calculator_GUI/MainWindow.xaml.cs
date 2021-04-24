@@ -21,14 +21,10 @@ namespace Calculator_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        //private string _numOne = "";
-        //private string _numTwo = "";
-        //private bool _numOneAssigned = false;
         private StringBuilder _selectedOpperation = new StringBuilder();
-
-        private string[] _nums = new string[20];
         private StringBuilder _currentNum = new StringBuilder();
 
+        private string[] _nums = new string[9];
         private int _currentNumCount = 0;
 
 
@@ -42,16 +38,6 @@ namespace Calculator_GUI
         //Number Selection
         private void btnNum1_Click(object sender, RoutedEventArgs e)
         {
-            //if (_numOneAssigned == false)
-            //{
-            //    _numOne += btnNum1.Content;
-            //}
-            //else
-            //{
-            //    _numTwo += btnNum1.Content;
-            //}
-            //display();
-
             _currentNum.Append(btnNum1.Content);
             updateCurrentNum();
 
@@ -137,32 +123,7 @@ namespace Calculator_GUI
         //Math Opperations
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //_numOneAssigned = true;
             _selectedOpperation.Append("+");
-
-            //_nums[_nums.Length] = _currentNum.ToString();
-
-            //int counter = 0;
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    if (_nums[i] != null)
-            //    {
-            //        counter++;
-            //    }
-            //}
-
-            //if (_nums[counter - 1] == null)
-            //{
-            //    //_nums[counter - 1] = _currentNum.ToString();
-            //    //_currentNum.Clear();
-            //}
-            //else if (_nums[counter] == null)
-            //{
-            //    _nums[counter] = _currentNum.ToString();
-            //    _currentNum.Clear();
-            //}
-
-
             _currentNum.Clear();
 
             _currentNumCount++;
@@ -171,13 +132,8 @@ namespace Calculator_GUI
 
         private void btnSubtract_Click(object sender, RoutedEventArgs e)
         {
-            //_numOneAssigned = true;
             _selectedOpperation.Append("-");
-
-            //_nums[_nums.Length] = _currentNum.ToString();
-
-
-            _currentNum.Clear();
+             _currentNum.Clear();
 
             _currentNumCount++;
             display();
@@ -185,10 +141,7 @@ namespace Calculator_GUI
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-            //_numOneAssigned = true;
             _selectedOpperation.Append("X");
-
-            //_nums[_nums.Length] = _currentNum.ToString();
             _currentNum.Clear();
 
             _currentNumCount++;
@@ -197,10 +150,7 @@ namespace Calculator_GUI
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            //_numOneAssigned = true;
             _selectedOpperation.Append("/");
-
-            //_nums[_nums.Length] = _currentNum.ToString();
             _currentNum.Clear();
 
             _currentNumCount++;
@@ -212,12 +162,9 @@ namespace Calculator_GUI
         //Calculate Output
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
-            //string output = $"{_numOne} + {_numTwo} = ";
             int result = 0, count = 0;
             int divCount = 0, mulCount = 0, addCount = 0, minCount = 0;
-            StringBuilder output = new StringBuilder();
             StringBuilder BODMAS = new StringBuilder();
-
             List<char> input = new List<char>();
 
             foreach (char item in _selectedOpperation.ToString())
@@ -238,8 +185,6 @@ namespace Calculator_GUI
                             divCount++;
                         }
                     }
-
-
                 }
                 if (input.Contains('X'))
                 {
@@ -276,9 +221,9 @@ namespace Calculator_GUI
                             minCount++;
                         }
                     }
-                }
-                
+                }                
             }
+
 
 
             bool hasDoneMath = false;
@@ -295,8 +240,7 @@ namespace Calculator_GUI
                         result += Calculator.Divide(Convert.ToInt32(_nums[num1]), Convert.ToInt32(_nums[num2]));
                         hasDoneMath = true;
                     }
-                }
-                    
+                }                    
             }
             if (mulCount > 0)
             {
@@ -318,8 +262,7 @@ namespace Calculator_GUI
                         result += Calculator.Multiply(Convert.ToInt32(_nums[num1]), num2);
                         hasDoneMath = true;
                     }
-                }
-                    
+                }                    
             }
             if (addCount > 0)
             {
@@ -328,9 +271,9 @@ namespace Calculator_GUI
                     if (BODMAS[j + 1].ToString() == "+" && hasDoneMath == false)
                     {
                         int num1 = BODMAS[j] - 48;
-                        int num2 = result;
+                        int num2 = BODMAS[j] - 47;
 
-                        result += Calculator.Add(Convert.ToInt32(_nums[num1]), result);
+                        result += Calculator.Add(Convert.ToInt32(_nums[num1]), Convert.ToInt32(_nums[num2]));
                         hasDoneMath = true;
                     }
                     else if (BODMAS[j + 1].ToString() == "+" && hasDoneMath == true)
@@ -342,8 +285,8 @@ namespace Calculator_GUI
                         hasDoneMath = true;
                     }
                 }
-
             }
+
 
             if (minCount > 0)
             {
@@ -365,7 +308,6 @@ namespace Calculator_GUI
                         hasDoneMath = true;
                     }
                 }
-
             }
 
             lblDisplay.Content = result;
@@ -378,13 +320,13 @@ namespace Calculator_GUI
         //Clear
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            //_numOne = "";
-            //_numTwo = "";
-            //_numOneAssigned = false;
-
-            //empty _nums array
             _currentNum.Clear();
             _currentNumCount = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                _nums[i] = null;
+            }
 
             _selectedOpperation.Clear();
             lblDisplay.Content = "";
@@ -398,7 +340,7 @@ namespace Calculator_GUI
             StringBuilder displayOut = new StringBuilder();
             int counter = 0;
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 10; i++)
             {
                 if (_nums[i] != null)
                 {
@@ -406,14 +348,13 @@ namespace Calculator_GUI
                 }
             }
 
+
             if (_nums[0] == null)
             {
                 displayOut.Append("0");
             }
             else if (_nums[0] != null && _selectedOpperation.ToString() != "")
             {
-                //lblDisplay.Content = _numOne + " " + _selectedOpperation + " " + _numTwo;
-                //StringBuilder displayOut = new StringBuilder();
 
                 for (int i = 0; i < counter; i++)
                 {
@@ -429,19 +370,17 @@ namespace Calculator_GUI
             }
             else if (_nums[0] != null)
             {
-                //lblDisplay.Content = _numOne + " " + _selectedOpperation + " " + _numTwo;
-
                 for (int i = 0; i < _nums.Length; i++)
                 {
                     if (_nums[i] != null)
                     {
                         displayOut.Append(_nums[i] + " ");
-                    }
-                    
+                    }                    
                 }
-
             }
+
             lblDisplay.Content = displayOut.ToString();
+
         }
 
 
@@ -454,14 +393,15 @@ namespace Calculator_GUI
                     _nums[0] = _currentNum.ToString();
                     break;
                 }
-                else if (_nums[i] != null)//&& _nums[i - 1] == null
+                else if (_nums[i] != null)
                 {
                     _nums[_currentNumCount] = _currentNum.ToString();
                     break;
-                }
-                
+                }                
             }
         }
+
+
 
 
     }
