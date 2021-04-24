@@ -21,146 +21,112 @@ namespace Calculator_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _numOne = "";
-        private string _numTwo = "";
-        private bool _numOneAssigned = false;
-        private string _selectedOpperation = "";
+        //private string _numOne = "";
+        //private string _numTwo = "";
+        //private bool _numOneAssigned = false;
+        private StringBuilder _selectedOpperation = new StringBuilder();
+
+        private string[] _nums = new string[20];
+        private StringBuilder _currentNum = new StringBuilder();
+
+        private int _currentNumCount = 0;
 
 
         public MainWindow()
         {
             InitializeComponent();
+            display();
         }
 
 
         //Number Selection
         private void btnNum1_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum1.Content;
-            }
-            else
-            {
-                _numTwo += btnNum1.Content;
-            }
+            //if (_numOneAssigned == false)
+            //{
+            //    _numOne += btnNum1.Content;
+            //}
+            //else
+            //{
+            //    _numTwo += btnNum1.Content;
+            //}
+            //display();
+
+            _currentNum.Append(btnNum1.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum2_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum2.Content;
-            }
-            else
-            {
-                _numTwo += btnNum2.Content;
-            }
+            _currentNum.Append(btnNum2.Content.ToString());
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum3_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum3.Content;
-            }
-            else
-            {
-                _numTwo += btnNum3.Content;
-            }
+            _currentNum.Append(btnNum3.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum4_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum4.Content;
-            }
-            else
-            {
-                _numTwo += btnNum4.Content;
-            }
+            _currentNum.Append(btnNum4.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum5_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum5.Content;
-            }
-            else
-            {
-                _numTwo += btnNum5.Content;
-            }
+            _currentNum.Append(btnNum5.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum6_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum6.Content;
-            }
-            else
-            {
-                _numTwo += btnNum6.Content;
-            }
+            _currentNum.Append(btnNum6.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum7_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum7.Content;
-            }
-            else
-            {
-                _numTwo += btnNum7.Content;
-            }
+            _currentNum.Append(btnNum7.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum8_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum8.Content;
-            }
-            else
-            {
-                _numTwo += btnNum8.Content;
-            }
+            _currentNum.Append(btnNum8.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum9_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum9.Content;
-            }
-            else
-            {
-                _numTwo += btnNum9.Content;
-            }
+            _currentNum.Append(btnNum9.Content);
+            updateCurrentNum();
+
             display();
         }
 
         private void btnNum0_Click(object sender, RoutedEventArgs e)
         {
-            if (_numOneAssigned == false)
-            {
-                _numOne += btnNum0.Content;
-            }
-            else
-            {
-                _numTwo += btnNum0.Content;
-            }
+            _currentNum.Append(btnNum0.Content);
+            updateCurrentNum();
+
             display();
         }
 
@@ -171,33 +137,73 @@ namespace Calculator_GUI
         //Math Opperations
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            _numOneAssigned = true;
-            _selectedOpperation = "+";
+            //_numOneAssigned = true;
+            _selectedOpperation.Append("+");
 
+            //_nums[_nums.Length] = _currentNum.ToString();
+
+            //int counter = 0;
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    if (_nums[i] != null)
+            //    {
+            //        counter++;
+            //    }
+            //}
+
+            //if (_nums[counter - 1] == null)
+            //{
+            //    //_nums[counter - 1] = _currentNum.ToString();
+            //    //_currentNum.Clear();
+            //}
+            //else if (_nums[counter] == null)
+            //{
+            //    _nums[counter] = _currentNum.ToString();
+            //    _currentNum.Clear();
+            //}
+
+
+            _currentNum.Clear();
+
+            _currentNumCount++;
             display();
         }
 
         private void btnSubtract_Click(object sender, RoutedEventArgs e)
         {
-            _numOneAssigned = true;
-            _selectedOpperation = "-";
+            //_numOneAssigned = true;
+            _selectedOpperation.Append("-");
 
+            //_nums[_nums.Length] = _currentNum.ToString();
+
+
+            _currentNum.Clear();
+
+            _currentNumCount++;
             display();
         }
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-            _numOneAssigned = true;
-            _selectedOpperation = "X";
+            //_numOneAssigned = true;
+            _selectedOpperation.Append("X");
 
+            //_nums[_nums.Length] = _currentNum.ToString();
+            _currentNum.Clear();
+
+            _currentNumCount++;
             display();
         }
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            _numOneAssigned = true;
-            _selectedOpperation = "/";
+            //_numOneAssigned = true;
+            _selectedOpperation.Append("/");
 
+            //_nums[_nums.Length] = _currentNum.ToString();
+            _currentNum.Clear();
+
+            _currentNumCount++;
             display();
         }
 
@@ -206,42 +212,164 @@ namespace Calculator_GUI
         //Calculate Output
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
-            if (_selectedOpperation == "+")
-            {
-                string output = $"{_numOne} + {_numTwo} = ";
-                string calculation = Calculator.Add(Convert.ToInt32(_numOne), Convert.ToInt32(_numTwo)).ToString();
-                lblDisplay.Content = output + calculation;
+            //string output = $"{_numOne} + {_numTwo} = ";
+            int result = 0, count = 0;
+            int divCount = 0, mulCount = 0, addCount = 0, minCount = 0;
+            StringBuilder output = new StringBuilder();
+            StringBuilder BODMAS = new StringBuilder();
 
-                _numOne = calculation;
-            }
-            else if (_selectedOpperation == "-")
-            {
-                string output = $"{_numOne} - {_numTwo} = ";
-                string calculation = Calculator.Subtract(Convert.ToInt32(_numOne), Convert.ToInt32(_numTwo)).ToString();
-                lblDisplay.Content = output + calculation;
+            List<char> input = new List<char>();
 
-                _numOne = calculation;
-            }
-            else if (_selectedOpperation == "X")
+            foreach (char item in _selectedOpperation.ToString())
             {
-                string output = $"{_numOne} X {_numTwo} = ";
-                string calculation = Calculator.Multiply(Convert.ToInt32(_numOne), Convert.ToInt32(_numTwo)).ToString();
-                lblDisplay.Content = output + calculation;
-
-                _numOne = calculation;
-            }
-            else if (_selectedOpperation == "/")
-            {
-                string output = $"{_numOne} / {_numTwo} = ";
-                string calculation = Calculator.Divide(Convert.ToInt32(_numOne), Convert.ToInt32(_numTwo)).ToString();
-                lblDisplay.Content = output + calculation;
-
-                _numOne = calculation;
+                input.Add(item);
             }
 
-            _selectedOpperation = "";
-            _numOneAssigned = true;
-            _numTwo = "";
+            while (count < input.Count)
+            {
+                if (input.Contains('/'))
+                {
+                    for (int i = 0; i < input.Count; i++)
+                    {
+                        if (input[i].ToString() == "/")
+                        {
+                            BODMAS.Append(i + "/");
+                            count++;
+                            divCount++;
+                        }
+                    }
+
+
+                }
+                if (input.Contains('X'))
+                {
+                    for (int i = 0; i < input.Count; i++)
+                    {
+                        if (input[i].ToString() == "X")
+                        {
+                            BODMAS.Append(i + "X");
+                            count++;
+                            mulCount++;
+                        }
+                    }
+                }
+                if (input.Contains('+'))
+                {
+                    for (int i = 0; i < input.Count; i++)
+                    {
+                        if (input[i].ToString() == "+")
+                        {
+                            BODMAS.Append(i + "+");
+                            count++;
+                            addCount++;
+                        }
+                    }
+                }
+                if (input.Contains('-'))
+                {
+                    for (int i = 0; i < input.Count; i++)
+                    {
+                        if (input[i].ToString() == "-")
+                        {
+                            BODMAS.Append(i + "-");
+                            count++;
+                            minCount++;
+                        }
+                    }
+                }
+                
+            }
+
+
+            bool hasDoneMath = false;
+
+            if (divCount > 0)
+            {
+                for (int j = 0; j < BODMAS.Length; j += 2)
+                {
+                    if (BODMAS[j + 1].ToString() == "/")
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = BODMAS[j] - 47;
+
+                        result += Calculator.Divide(Convert.ToInt32(_nums[num1]), Convert.ToInt32(_nums[num2]));
+                        hasDoneMath = true;
+                    }
+                }
+                    
+            }
+            if (mulCount > 0)
+            {
+                for (int j = 0; j < BODMAS.Length; j += 2)
+                {
+                    if (BODMAS[j + 1].ToString() == "X" && hasDoneMath == false)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = BODMAS[j] - 47;
+
+                        result += Calculator.Multiply(Convert.ToInt32(_nums[num1]), Convert.ToInt32(_nums[num2]));
+                        hasDoneMath = true;
+                    }
+                    else if (BODMAS[j + 1].ToString() == "X" && hasDoneMath == true)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = result;
+
+                        result += Calculator.Multiply(Convert.ToInt32(_nums[num1]), num2);
+                        hasDoneMath = true;
+                    }
+                }
+                    
+            }
+            if (addCount > 0)
+            {
+                for (int j = 0; j < BODMAS.Length; j += 2)
+                {
+                    if (BODMAS[j + 1].ToString() == "+" && hasDoneMath == false)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = result;
+
+                        result += Calculator.Add(Convert.ToInt32(_nums[num1]), result);
+                        hasDoneMath = true;
+                    }
+                    else if (BODMAS[j + 1].ToString() == "+" && hasDoneMath == true)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = result;
+
+                        result = Calculator.Add(Convert.ToInt32(_nums[num1]), num2);
+                        hasDoneMath = true;
+                    }
+                }
+
+            }
+
+            if (minCount > 0)
+            {
+                for (int j = 0; j < BODMAS.Length; j += 2)
+                {
+                    if (BODMAS[j + 1].ToString() == "-" && hasDoneMath == false)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = BODMAS[j] - 47;
+
+                        result += Calculator.Subtract(Convert.ToInt32(_nums[num1]), Convert.ToInt32(_nums[num2]));
+                    }
+                    else if (BODMAS[j + 1].ToString() == "-" && hasDoneMath == true)
+                    {
+                        int num1 = BODMAS[j] - 48;
+                        int num2 = result;
+
+                        result = Calculator.Subtract(Convert.ToInt32(_nums[num1]), num2);
+                        hasDoneMath = true;
+                    }
+                }
+
+            }
+
+            lblDisplay.Content = result;
+            _selectedOpperation.Clear();
 
         }
 
@@ -250,10 +378,15 @@ namespace Calculator_GUI
         //Clear
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            _numOne = "";
-            _numTwo = "";
-            _numOneAssigned = false;
-            _selectedOpperation = "";
+            //_numOne = "";
+            //_numTwo = "";
+            //_numOneAssigned = false;
+
+            //empty _nums array
+            _currentNum.Clear();
+            _currentNumCount = 0;
+
+            _selectedOpperation.Clear();
             lblDisplay.Content = "";
         }
 
@@ -262,15 +395,72 @@ namespace Calculator_GUI
         //Display
         private void display()
         {
-            if (_numOneAssigned == false)
+            StringBuilder displayOut = new StringBuilder();
+            int counter = 0;
+
+            for (int i = 0; i < 20; i++)
             {
-                lblDisplay.Content = _numOne;
+                if (_nums[i] != null)
+                {
+                    counter++;
+                }
             }
-            else if (_numOneAssigned + _selectedOpperation != "")
+
+            if (_nums[0] == null)
             {
-                lblDisplay.Content = _numOne + " " + _selectedOpperation + " " + _numTwo;
+                displayOut.Append("0");
             }
-            
+            else if (_nums[0] != null && _selectedOpperation.ToString() != "")
+            {
+                //lblDisplay.Content = _numOne + " " + _selectedOpperation + " " + _numTwo;
+                //StringBuilder displayOut = new StringBuilder();
+
+                for (int i = 0; i < counter; i++)
+                {
+                    displayOut.Append(_nums[i] + " ");
+
+                    if (i < _selectedOpperation.Length)
+                    {
+                        displayOut.Append(_selectedOpperation[i] + " ");
+                    }
+                    
+                }
+
+            }
+            else if (_nums[0] != null)
+            {
+                //lblDisplay.Content = _numOne + " " + _selectedOpperation + " " + _numTwo;
+
+                for (int i = 0; i < _nums.Length; i++)
+                {
+                    if (_nums[i] != null)
+                    {
+                        displayOut.Append(_nums[i] + " ");
+                    }
+                    
+                }
+
+            }
+            lblDisplay.Content = displayOut.ToString();
+        }
+
+
+        private void updateCurrentNum()
+        {
+            for (int i = _nums.Length - 1; i >= 0; i--)
+            {
+                if (_nums[0] == null)
+                {
+                    _nums[0] = _currentNum.ToString();
+                    break;
+                }
+                else if (_nums[i] != null)//&& _nums[i - 1] == null
+                {
+                    _nums[_currentNumCount] = _currentNum.ToString();
+                    break;
+                }
+                
+            }
         }
 
 
