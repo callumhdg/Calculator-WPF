@@ -55,7 +55,7 @@
         <Button x:Name="btnDivide" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="/" Click="btnDivide_Click" Background="CornflowerBlue" FontSize="20"/>
 
         <Button x:Name="btnClear" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="C" Click="btnClear_Click" Background="PaleVioletRed" FontSize="20"/>
-        <Button x:Name="btnEquals" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="=" Click="btnEquals_Click" FontSize="20"/>
+        <Button x:Name="btnEquals" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="=" Click="btnEquals_Click" FontSize="20" Background="LightGreen"/>
 
                 
         <!--output-->
