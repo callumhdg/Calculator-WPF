@@ -49,10 +49,10 @@
 
 
         <!--opperator buttons-->
-        <Button x:Name="btnAdd" Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="+" Click="btnAdd_Click" Background="CornflowerBlue" FontSize="20"/>
-        <Button x:Name="btnSubtract" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="-" Click="btnSubtract_Click" Background="CornflowerBlue" FontSize="20"/>
-        <Button x:Name="btnMultiply" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="X" Click="btnMultiply_Click" Background="CornflowerBlue" FontSize="20"/>
-        <Button x:Name="btnDivide" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="/" Click="btnDivide_Click" Background="CornflowerBlue" FontSize="20"/>
+        <Button x:Name="btnAdd" Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="+" Click="addOppToSelectedOpps" Background="CornflowerBlue" FontSize="20"/>
+        <Button x:Name="btnSubtract" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="-" Click="addOppToSelectedOpps" Background="CornflowerBlue" FontSize="20"/>
+        <Button x:Name="btnMultiply" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="X" Click="addOppToSelectedOpps" Background="CornflowerBlue" FontSize="20"/>
+        <Button x:Name="btnDivide" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="/" Click="addOppToSelectedOpps" Background="CornflowerBlue" FontSize="20"/>
 
         <Button x:Name="btnClear" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="C" Click="btnClear_Click" Background="PaleVioletRed" FontSize="20"/>
         <Button x:Name="btnEquals" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="=" Click="btnEquals_Click" FontSize="20" Background="LightGreen"/>

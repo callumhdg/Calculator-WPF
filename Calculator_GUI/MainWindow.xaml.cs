@@ -47,36 +47,9 @@ namespace Calculator_GUI
 
 
         //Math Opperations
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void addOppToSelectedOpps(object sender, RoutedEventArgs e)
         {
-            _selectedOpperation.Append("+");
-            _currentNum.Clear();
-
-            _currentNumCount++;
-            display();
-        }
-
-        private void btnSubtract_Click(object sender, RoutedEventArgs e)
-        {
-            _selectedOpperation.Append("-");
-             _currentNum.Clear();
-
-            _currentNumCount++;
-            display();
-        }
-
-        private void btnMultiply_Click(object sender, RoutedEventArgs e)
-        {
-            _selectedOpperation.Append("X");
-            _currentNum.Clear();
-
-            _currentNumCount++;
-            display();
-        }
-
-        private void btnDivide_Click(object sender, RoutedEventArgs e)
-        {
-            _selectedOpperation.Append("/");
+            _selectedOpperation.Append((sender as Button).Content.ToString());
             _currentNum.Clear();
 
             _currentNumCount++;
