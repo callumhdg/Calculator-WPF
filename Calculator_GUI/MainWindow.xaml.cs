@@ -36,87 +36,13 @@ namespace Calculator_GUI
 
 
         //Number Selection
-        private void btnNum1_Click(object sender, RoutedEventArgs e)
+        private void addNumToValue(object sender, RoutedEventArgs e)
         {
-            _currentNum.Append(btnNum1.Content);
+            _currentNum.Append((sender as Button).Content.ToString());
             updateCurrentNum();
 
             display();
         }
-
-        private void btnNum2_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum2.Content.ToString());
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum3_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum3.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum4_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum4.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum5_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum5.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum6_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum6.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum7_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum7.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum8_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum8.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum9_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum9.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-        private void btnNum0_Click(object sender, RoutedEventArgs e)
-        {
-            _currentNum.Append(btnNum0.Content);
-            updateCurrentNum();
-
-            display();
-        }
-
-
 
 
 

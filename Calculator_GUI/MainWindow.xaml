@@ -33,19 +33,19 @@
         </Grid.ColumnDefinitions>
         
         <!--numbered buttons-->
-        <Button x:Name="btnNum1" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="1" Click="btnNum1_Click" FontSize="20" />
-        <Button x:Name="btnNum2" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="2" Click="btnNum2_Click" FontSize="20"/>
-        <Button x:Name="btnNum3" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="3" Click="btnNum3_Click" FontSize="20"/>
+        <Button x:Name="btnNum1" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="1" Click="addNumToValue" FontSize="20" />
+        <Button x:Name="btnNum2" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="2" Click="addNumToValue" FontSize="20"/>
+        <Button x:Name="btnNum3" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="3" Click="addNumToValue" FontSize="20"/>
 
-        <Button x:Name="btnNum4" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="4" Click="btnNum4_Click" FontSize="20"/>
-        <Button x:Name="btnNum5" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="5" Click="btnNum5_Click" FontSize="20"/>
-        <Button x:Name="btnNum6" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="6" Click="btnNum6_Click" FontSize="20"/>
+        <Button x:Name="btnNum4" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="4" Click="addNumToValue" FontSize="20"/>
+        <Button x:Name="btnNum5" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="5" Click="addNumToValue" FontSize="20"/>
+        <Button x:Name="btnNum6" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="6" Click="addNumToValue" FontSize="20"/>
 
-        <Button x:Name="btnNum7" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="7" Click="btnNum7_Click" FontSize="20"/>
-        <Button x:Name="btnNum8" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="8" Click="btnNum8_Click" FontSize="20"/>
-        <Button x:Name="btnNum9" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="9" Click="btnNum9_Click" FontSize="20"/>
+        <Button x:Name="btnNum7" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="7" Click="addNumToValue" FontSize="20"/>
+        <Button x:Name="btnNum8" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="8" Click="addNumToValue" FontSize="20"/>
+        <Button x:Name="btnNum9" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="9" Click="addNumToValue" FontSize="20"/>
 
-        <Button x:Name="btnNum0" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="0" Click="btnNum0_Click" FontSize="20"/>
+        <Button x:Name="btnNum0" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="1" Content="0" Click="addNumToValue" FontSize="20"/>
 
 
         <!--opperator buttons-->

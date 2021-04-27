@@ -135,7 +135,7 @@ This calculator only utilises the 'DMAS' part of 'BODMAS' as mentioned above.
 
 The logic for this calculator has a long way to go before being able to preform long calculations but can currently calculate three numbers with two operators for example; 2 + 3 X 2 = 8
 
-![Example Sum](Images\Two_Add_Three_Mult_Two.jpg)
+![Example Sum](Images/Two_Add_Three_Mult_Two.jpg)
 
 ![Example Sum Output](Images\Example_Sum1_Output.jpg)
 
