@@ -1,7 +1,7 @@
 # Calculator-WPF
 A simple calculator using C#.
 
-![This is the default view](C:\Users\callu\Desktop\Sparta Global Training\Reops\Calculator-WPF\Images\Default_View.jpg)
+![This is the default view](Images\Default_View.jpg)
 
 
 
@@ -135,9 +135,9 @@ This calculator only utilises the 'DMAS' part of 'BODMAS' as mentioned above.
 
 The logic for this calculator has a long way to go before being able to preform long calculations but can currently calculate three numbers with two operators for example; 2 + 3 X 2 = 8
 
-![Example Sum](C:\Users\callu\Desktop\Sparta Global Training\Reops\Calculator-WPF\Images\Two_Add_Three_Mult_Two.jpg)
+![Example Sum](Images\Two_Add_Three_Mult_Two.jpg)
 
-![Example Sum Output](C:\Users\callu\Desktop\Sparta Global Training\Reops\Calculator-WPF\Images\Example_Sum1_Output.jpg)
+![Example Sum Output](Images\Example_Sum1_Output.jpg)
 
 
 
@@ -174,7 +174,7 @@ The sort method appends four characters to the end of 'BODMAS' string builder as
 4. Finally the right number of the current sum is appended to 'BODMAS'
 5. Repeat.
 
-BODMAS.ToString() would equal "01X210+1".
+`BODMAS.ToString()` would equal "01X210+1".
 
 In the future this could be separated with a space to improve readability.
 
