@@ -1,7 +1,7 @@
 # Calculator-WPF
 A simple calculator using C#.
 
-![This is the default view](Images\Default_View.jpg)
+![This is the default view](Images/Default_View.jpg)
 
 
 
@@ -137,7 +137,7 @@ The logic for this calculator has a long way to go before being able to preform 
 
 ![Example Sum](Images/Two_Add_Three_Mult_Two.jpg)
 
-![Example Sum Output](Images\Example_Sum1_Output.jpg)
+![Example Sum Output](Images/Example_Sum1_Output.jpg)
 
 
 
